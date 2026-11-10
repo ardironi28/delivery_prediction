@@ -1,0 +1,21 @@
+{
+  "model": "XGBoost",
+  "training_rows": 152914,
+  "test_rows": 38229,
+  "MAE_minutes": 10.430103730088106,
+  "RMSE_minutes": 13.149849738575872,
+  "R2": 0.20586826831736016,
+  "features": [
+    "total_items",
+    "subtotal",
+    "num_distinct_items",
+    "min_item_price",
+    "max_item_price",
+    "total_onshift_partners",
+    "total_busy_partners",
+    "total_outstanding_orders"
+  ],
+  "clean_rows": 191143,
+  "target": "delivery_time_minutes",
+  "cleaning": "Drop missing timestamps; duration target; IQR filter with lower bound max(120 sec, Q1-1.5*IQR)"
+}
